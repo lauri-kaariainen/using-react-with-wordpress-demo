@@ -11,13 +11,12 @@
     "axios": "^0.18.1",
     "bulma": "^0.7.2",
     "parcel": "latest",
-    "preact": "latest",
-    "preact-compat": "latest",
+    "preact": "10.0.0-beta.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
   },
   "alias": {
-    "react": "preact-compat",
-    "react-dom": "preact-compat"
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
   }
 }
