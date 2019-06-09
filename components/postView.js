@@ -12,6 +12,7 @@ class PostView extends Component {
   }
 
   componentDidMount() {
+    console.log("postView mounting");
     const slug = this.props.match.params.slug;
     axios
       .get(`https://techcrunch.com/wp-json/wp/v2/posts?slug=${slug}`)

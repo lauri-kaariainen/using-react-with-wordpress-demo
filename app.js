@@ -10,8 +10,8 @@ const App = () => (
     <div>
       <Header />
       <section className="section container content">
-        <Route exact path="/" component={PostList} />
-        <Route path="/:slug" component={PostView} />
+        <Route exact path="/random/using-react-with-wordpress-demo/dist/" component={PostList} />
+        <Route path="/random/using-react-with-wordpress-demo/dist/:slug" component={PostView} />
       </section>
     </div>
   </Router>

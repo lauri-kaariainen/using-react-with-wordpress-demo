@@ -13,6 +13,7 @@ class PostList extends Component {
   }
 
   componentDidMount() {
+    console.log("postList mounting")
     axios.get("https://techcrunch.com/wp-json/wp/v2/posts").then(posts => {
       this.setState({
         posts: posts.data
@@ -28,7 +29,7 @@ class PostList extends Component {
     return (
       <div>
         {this.state.posts.map(post => (
-          <Link to={`/${post.slug}`} key={post.id}>
+          <Link to={`./${post.slug}`} key={post.id}>
             <div className="card" key={post.id}>
               <div className="card-content">
                 <h3>{post.title.rendered}</h3>
