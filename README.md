@@ -1,4 +1,5 @@
-Changed react to preact 10.0.0-beta.2
+Changed react to preact 10.0.0-beta.2, working example with react-router ^4.3.1
+
 Note that bundling is done with parceljs.
 
 -old topic below
