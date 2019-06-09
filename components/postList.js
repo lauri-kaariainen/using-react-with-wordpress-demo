@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+//import React, { Component } from "react";
+import { h, Component } from "preact";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Link from "react-router-dom/Link";
 
 class PostList extends Component {
   constructor(props) {

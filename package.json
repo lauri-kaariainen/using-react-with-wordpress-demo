@@ -1,5 +1,5 @@
 {
-  "name": "using-wordpress-with-react",
+  "name": "using-wordpress-with-preact",
   "version": "1.0.0",
   "main": "index.js",
   "author": "<tgsmith489@gmail.com>",
@@ -8,12 +8,16 @@
     "start": "parcel index.html"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "bulma": "^0.7.2",
-    "parcel": "^1.11.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "parcel": "latest",
+    "preact": "latest",
+    "preact-compat": "latest",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
+  },
+  "alias": {
+    "react": "preact-compat",
+    "react-dom": "preact-compat"
   }
 }

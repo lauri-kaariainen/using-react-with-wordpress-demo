@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { h, render } from "preact"
+import Router from "react-router-dom/BrowserRouter";
+import Route from "react-router/Route";
 import Header from "./components/header";
 import PostList from "./components/postList";
 import PostView from "./components/postView";
@@ -17,4 +17,4 @@ const App = () => (
   </Router>
 );
 
-ReactDOM.render(<App />, document.getElementById("app"));
+render(<App />, document.getElementById("app"));

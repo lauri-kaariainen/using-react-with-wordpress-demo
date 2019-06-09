@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+//import React from "react";
+import { h, Component } from "preact";
+import Link from "react-router-dom/Link";
 
 const Header = () => (
   <nav className="navbar is-primary">
