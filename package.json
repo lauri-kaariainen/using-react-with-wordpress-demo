@@ -18,5 +18,8 @@
   "alias": {
     "react": "preact/compat",
     "react-dom": "preact/compat"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }
