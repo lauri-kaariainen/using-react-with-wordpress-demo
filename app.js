@@ -10,6 +10,7 @@ import PostView from "./components/postView";
 const App = () => {
 
   const [postViewCache, setPostViewCache] = useState({});
+  const [postListCache, setPostListCache] = useState({});
 
 
   return (
@@ -18,7 +19,12 @@ const App = () => {
         {/*<ScrollMemory />*/}
         <Header />
         <section className="section container content">
-          <Route exact path="/random/using-react-with-wordpress-demo/dist/" component={PostList} />
+          <Route
+            exact
+            path="/random/using-react-with-wordpress-demo/dist/"
+            render={props => (<PostList {...props} cache={postListCache} fillCache={setPostListCache} />)}
+          //component={PostList}
+          />
           <Route
             path="/random/using-react-with-wordpress-demo/dist/:slug"
             render={props => (<PostView {...props} cache={postViewCache} fillCache={setPostViewCache} />)}

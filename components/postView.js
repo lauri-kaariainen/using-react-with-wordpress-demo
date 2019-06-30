@@ -12,7 +12,6 @@ class PostView extends Component {
   }
 
   componentDidMount() {
-    console.log("postView mounting");
     const slug = this.props.match.params.slug;
     if (this.props.cache[slug.toString()])
       return this.setState({ post: this.props.cache[slug.toString()] });
@@ -21,7 +20,6 @@ class PostView extends Component {
         .get(`https://techcrunch.com/wp-json/wp/v2/posts?slug=${slug}`)
         .then(post => {
           this.props.fillCache({ ...this.props.cache, [slug]: post.data[0] })
-          console.log("postView got the data!");
           this.setState({
             post: post.data[0]
           });
@@ -33,7 +31,6 @@ class PostView extends Component {
   }
 
   render() {
-    console.log("postview rendered");
     let build;
     if (this.state.post.title) {
       build = (

@@ -13,8 +13,11 @@ class PostList extends Component {
   }
 
   componentDidMount() {
-    console.log("postList mounting")
+    if (this.props.cache.data) {
+      return this.setState({ posts: this.props.cache.data })
+    }
     axios.get("https://techcrunch.com/wp-json/wp/v2/posts").then(posts => {
+      this.props.fillCache({ data: posts.data });
       this.setState({
         posts: posts.data
       });
